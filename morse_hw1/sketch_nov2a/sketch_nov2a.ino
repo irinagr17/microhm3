@@ -17,7 +17,7 @@ String CODES[] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","
 char LETTERS[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 // String CODES[] = {".-", "--.."};
 // char LETTERS[] = {'A', 'Z'};
-int NLETTERS = 27;
+int NLETTERS = 26;
 
 void setup() {
   pinMode(DATA_PIN, INPUT);
