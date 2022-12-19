@@ -2,6 +2,7 @@ import serial
 import time
 
 ##ira
+len = 0
 
 lengths = {'f': 3,
            'u': 0,
