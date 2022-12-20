@@ -1,29 +1,28 @@
-#define led_pin 3
-#define sensor_pin A2
-
-void setup() {
-  Serial.begin(9600);
-  pinMode(led_pin, OUTPUT);
-}
-
-void loop() {
-  if (Serial.available() > 0){
-    char message = Serial.read();
-    if (message == 'u'){
-      digitalWrite(led_pin, HIGH);
+#define led_pin 2 
+#define sen_pin A2
+ 
+void setup() { 
+  Serial.begin(9600); 
+  pinMode(led_pin, OUTPUT); 
+ 
+} 
+ 
+void loop() { 
+  if (Serial.available()>0){ 
+    char message = Serial.read(); 
+    if (message == 'u'){ 
+      digitalWrite(led_pin, HIGH); 
     }
-    else if (message == 'd'){
-      digitalWrite(led_pin, LOW);
+    else if(message == 'd'){ 
+      digitalWrite(led_pin, LOW); 
     }
-    else if (message == 'f' || message == 'a'){
-      int val = analogRead(sensor_pin);
+    else if(message == 'f'){ 
+      int val = analogRead(sen_pin); 
       val = map(val, 0, 1023, 100, 999);
-      Serial.print(val);
+      Serial.print(val); 
     }
-    else if(message != 'b'){
-      Serial.println("Unknown message");
-    }
-  }
-
-
+    else{ 
+      Serial.println("Unknown message"); 
+    } 
+  } 
 }
