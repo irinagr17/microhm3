@@ -11,17 +11,9 @@ void setup() {
   pinMode(led_pin6, OUTPUT);
 }
 
-int val1;
-int val3;
-int val2;
-int val4;
 String result;
 
 void loop() {
-  val1 = 0;
-  val3 = 0;
-  val2 = 0;
-  val4 = 0;
   result = "";
   pinMode(led_pin6, INPUT);
   pinMode(led_pin5, OUTPUT);
@@ -29,12 +21,10 @@ void loop() {
   if (digitalRead(led_pin3) == 1 && digitalRead(led_pin4) == 0)
   {
     result += "1";
-    // val1 = 1;
   }
   if (digitalRead(led_pin4) == 1 && digitalRead(led_pin3) == 0)
   {
     result += "2";
-    // val2 = 1;
   }
   if (digitalRead(led_pin4) == 1 && digitalRead(led_pin3) == 1)
   { 
@@ -47,53 +37,16 @@ void loop() {
   if (digitalRead(led_pin3) == 1 && digitalRead(led_pin4) == 0)
   {
     result += "3";
-    // val3 = 1;
   }
   if (digitalRead(led_pin4) == 1 && digitalRead(led_pin3) == 0)
   {
     result += "4";
-    // val4 = 1;
   }
   if (digitalRead(led_pin4) == 1 && digitalRead(led_pin3) == 1)
   { 
     result += "34";
   }  
-  // if (val3 == 1 && val1 == 1 && val2 == 0 && val4 == 0)
-  // { 
-  //   result = "1, 3  кнопка";
-  // }
-  // if (val1 == 1 && val4 == 1 && val2 == 0 && val3 == 0)
-  // { 
-  //   result = "1, 4  кнопка";
-  // }
-  // if (val2 == 1 && val3 == 1 && val1 == 0 && val4 == 0)
-  // { 
-  //   result = "2, 3  кнопка";
-  // }
-  // if (val2 == 1 && val4 == 1 && val1 == 0 && val3 == 0)
-  // { 
-  //   result = "2, 4  кнопка";
-  // }
-  // if (val1 == 1 && val2 == 1 && val3 == 1 && val4 == 0)
-  // { 
-  //   result = "1, 2, 3  кнопка";
-  // }
-  // if (val1 == 1 && val2 == 1 && val4 == 1 && val3 == 0)
-  // { 
-  //   result = "1, 2, 4  кнопка";
-  // }
-  // if (val1 == 1 && val3 == 1 && val4 == 1 && val2 == 0)
-  // { 
-  //   result = "1, 3, 4  кнопка";
-  // }
-  // if (val2 == 1 && val3 == 1 && val4 == 1 && val1 == 0)
-  // { 
-  //   result = "2, 3, 4  кнопка";
-  // }
-  // if (val2 == 1 && val3 == 1 && val4 == 1 && val1 == 1)
-  // { 
-  //   result = "все  кнопка";
-  // }
+
   if (result != ""){
     Serial.println(result);
   }
