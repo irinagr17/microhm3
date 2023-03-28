@@ -13,10 +13,10 @@ class Car:
     def backward(self):
         self.uart.write('b')
 
-    def rotate_right(self):
+    def right(self):
         self.uart.write('r')
 
-    def rotate_left(self):
+    def left(self):
         self.uart.write('l')
     
     def stop(self):
